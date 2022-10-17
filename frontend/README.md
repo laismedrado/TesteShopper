@@ -1,46 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/196091677-cc649d79-4013-4991-ae7a-a185d4813521.png"  width="250" height="150"  /> 
+</div>
 
-## Available Scripts
+  ___
+ <h3 align = "center">  Formulário de cadastro de pedidos de supermercado. Desenvolvido em Typescript (Node.js / React.js), para avaliação técnica para vaga de Desenvolvedora Fullstack Jr. na Shopper.
+ </h3>
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✍🏻 Funcionalidades
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br/>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+    A aplicação conta com as seguintes funcionalidades:
+    - banco de dados relacional 
+    - Persistência de dados no Postgres
+    - Validações de dados no backend e frontend;
+    - Tela de listagem de produtos do estoque  através da renderização 
+      de cards compostos por:
+             - o nome , preço e um botão  de seleção  
+    - Header interativo sinalizando ao cliente a quantidade de itens escolhidos 
+    - Carrinho de compras contendo:
+        - lista dos  cards de produtos selecionados
+        - operaões numéricas de total e subtotal da compra
+        - inputs de dados do usuário para finalização da compra
+        - botões de cancelar, fechar e finalizar 
+    - Alerts de feedback das ações do usuário 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  </br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ## 🛠 Ferramentas 
+</br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    - PRISMA
+    - DOCKER - COMPOSE
+    - POSTGRES
+    - NODE JS
+    - REACTJS
+    - TYPESCRIPT
+    - MATERIAL UI
+    - STYLED COMPONENTES
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+___
+</br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🖥   Contribuindo ou testando localmente 
+**Pré-requisitos:** Ter instalado na máquina ,node.js, git e docker-compose.
+</br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+ ### Clone o repositório 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+ $ git clone https://github.com/laismedrado/TesteShopper.git
+```
+### Acesse a pasta backend do projeto 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ cd backend
+```
+
+  ### Instale as dependências 
+
+```
+$ npm install
+
+```
+### Rode o projeto
+
+```
+
+$ npm run start
+```
+### Acesse a pasta frontend do projeto 
+
+```
+$ cd frontend
+```
+
+  ### Instale as dependências 
+
+```
+$ npm install
+
+```
+### Rode o projeto
+
+```
+
+$ npm run start
+```
+
+## Sugestões 🗣
+
+Caso tenha alguma sugestão ou queira reportar algum bug, abra um issue no repositório. Ficarei muito grata com a sua colaboração! 
+
