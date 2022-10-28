@@ -1,4 +1,4 @@
-import { Order,Products } from "@prisma/client";
+import { Order, Products } from "@prisma/client";
 import { prisma } from "../data/prismaClient";
 import { AppError } from "../error/AppErrors";
 import { OrderType } from "../model/Order";
@@ -11,7 +11,7 @@ export const createOrder = async ({
 }: OrderType): Promise<OrderType> => {
   try {
     let totalPrice = 0;
-    const orderProducts: OrderProductType[] = [];
+    const orderProducts: OrderProductType[] = []; //array de produtos vazio
     const idList = items.map((item) => item.id);
     const productsInDatabase = await prisma.products.findMany({
       where: {
@@ -20,9 +20,10 @@ export const createOrder = async ({
         },
       },
     });
+
     const productsStockUpdated = productsInDatabase.map((product) => {
       const orderedProduct = items.find((item) => product.id === item.id);
-      console.log(orderedProduct, product);
+
       if (
         orderedProduct?.quantityOrdered &&
         product.qty_stock >= orderedProduct?.quantityOrdered
@@ -42,7 +43,14 @@ export const createOrder = async ({
       };
       return productStockUpdated;
     });
-    console.log("tesssteee", productsStockUpdated);
+
+    const nameValidate = name.split(" ");
+    if (nameValidate.length < 2) {
+      throw new AppError(
+        "Preencha o campo corretamente colocando nome e sobrenome."
+      );
+    }
+
     const order = await prisma.order.create({
       data: {
         delivery_date: new Date(deliveryDate),
@@ -60,8 +68,8 @@ export const createOrder = async ({
       data: orderProductsEntities,
     });
 
-    productsStockUpdated.forEach((item) => {
-      prisma.products.updateMany({
+    productsStockUpdated.forEach(async (item) => {
+      const updateInDatabase = await prisma.products.update({
         where: { id: item.id },
         data: { qty_stock: item.qty_stock },
       });
@@ -74,27 +82,8 @@ export const createOrder = async ({
       name: order.name,
       totalPrice: order.total_price,
     };
-  } catch (err: any) {
-    throw new AppError(err);
-  }
-};
-
-export const getAllOrders = async (): Promise<Order[]> => {
-  try {
-    const getOrders = await prisma.order.findMany({
-      include: {
-        order_products: {
-          select: {
-            id: true,
-            orderId: true,
-            quantity: true,
-          },
-        },
-      },
-    });
-
-    return getOrders;
-  } catch (err: any) {
-    throw new AppError(err);
+  } catch (error: any) {
+    console.log(error);
+    throw new AppError(error);
   }
 };

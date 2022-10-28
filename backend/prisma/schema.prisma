@@ -16,6 +16,8 @@ model Order {
   delivery_date  DateTime
   order_products  Order_Products[]
   total_price    Float
+
+  @@map("orders")
 }
 
 model Order_Products {
@@ -26,6 +28,7 @@ model Order_Products {
   productId Int
   quantity  Int
 
+@@map("order_products")
 
 }
 
@@ -35,4 +38,6 @@ model Products {
   price          Float
   qty_stock      Int
   order_products Order_Products[]
+  
+  @@map("products")
 }

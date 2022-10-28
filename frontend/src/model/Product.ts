@@ -4,4 +4,5 @@ export type ProductType = {
   price?: number;
   quantityStock: number;
   quantityOrdered?: number;
+  qty_stock?: number;
 };

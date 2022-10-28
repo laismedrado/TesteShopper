@@ -20,7 +20,7 @@ export const GlobalState = (props: GlobalStateType) => {
   const getProducts = () => {
     ProductService.getAllProduct()
       .then((response) => setProducts(response))
-      .catch((err) => alertError(err,"Algo deu errado, tente novamente."));
+      .catch((err) => alertError(err, "Algo deu errado, tente novamente."));
   };
 
   const updateStock = (product: ProductType, action: Actions) => {
@@ -30,9 +30,11 @@ export const GlobalState = (props: GlobalStateType) => {
       (productItem) => product.id === productItem.id
     );
     if (action === Actions.ADD) {
-      newProducts[productIndex].quantityStock -= 1;
+      newProducts[productIndex].quantityStock =
+        newProducts[productIndex].quantityStock - 1;
     } else {
-      newProducts[productIndex].quantityStock += 1;
+      newProducts[productIndex].quantityStock =
+        newProducts[productIndex].quantityStock + 1;
     }
   };
 
@@ -42,12 +44,10 @@ export const GlobalState = (props: GlobalStateType) => {
     const productIndex = newProductsCart.findIndex(
       (productItem) => product.id === productItem.id
     );
-
     if (product.quantityStock <= 0) {
-      alertError("","Produto indisponível!");
+      alertError("", "Produto indisponível!");
       return;
     }
-
     if (productIndex === -1) {
       newProductsCart.push({
         id: product.id,
@@ -56,6 +56,7 @@ export const GlobalState = (props: GlobalStateType) => {
         price: product.price,
         quantityStock: product.quantityStock,
       });
+
       alertSuccess(`${product.name} adcionado ao carrinho!`);
     } else {
       newProductsCart[productIndex].quantityOrdered! += 1;
@@ -63,8 +64,7 @@ export const GlobalState = (props: GlobalStateType) => {
     setProductsCart(newProductsCart);
     updateStock(product, Actions.ADD);
   };
-
-  const removeFromCart = (product:ProductType) => {
+  const removeFromCart = (product: ProductType) => {
     const newProductsCart = [...productsCart];
 
     const productIndex = newProductsCart.find(
@@ -75,13 +75,13 @@ export const GlobalState = (props: GlobalStateType) => {
       setProductsCart(newProductsCart);
     } else {
       const arrayFiltered = newProductsCart.filter(
-        (productItem) => productItem.id!==product.id
+        (productItem) => productItem.id !== product.id
       );
       setProductsCart(arrayFiltered);
       updateStock(product, Actions.REMOVE);
     }
   };
-
+  
   const clearCart = () => {
     setProductsCart([]);
   };
@@ -100,6 +100,7 @@ export const GlobalState = (props: GlobalStateType) => {
         clearCart,
         products,
         productsCart,
+        getProducts,
       }}
     >
       {props.children}

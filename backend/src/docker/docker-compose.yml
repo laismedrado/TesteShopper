@@ -4,6 +4,6 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: shopper
+      POSTGRES_PASSWORD: process.env.DB_PASSWORD
     ports:
-      - 5432:5432
+      - process.env.DB_PORT

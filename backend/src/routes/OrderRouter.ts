@@ -1,16 +1,6 @@
 import { Router } from "express";
-import {
-  createOrderEndpoint,
-  getAllOrderEndpoint,
-} from "../controller/OrderController";
-import { check } from "express-validator";
-
-const createOrderValidator = [
-  check("name").notEmpty(),
-  check("items").notEmpty(),
-  check("deliveryDate").notEmpty(),
-];
+import { createOrderEndpoint } from "../controller/OrderController";
+import { createOrderValidator } from "../validator/orderValidator";
 
 export const orderRoutes = Router();
 orderRoutes.post("/", createOrderValidator, createOrderEndpoint);
-orderRoutes.get("/", getAllOrderEndpoint);

@@ -1,6 +1,5 @@
 export const Error = {
   BadRequest: 400,
-
   NotFound: 404,
   MethodNotAllowed: 405,
   InternalServerError: 500,

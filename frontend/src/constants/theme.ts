@@ -6,8 +6,21 @@ export const theme: Theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
+          cursor: "grab",
+          fontFamily: "Raleway, Arial",
+          fontSize: ".69rem",
+          fontWeight: 1000,
+          marginTop: ".3rem",
           background: shopperGreen,
+          borderWidth: ".15rem",
           color: black,
+          borderColor: black,
+          outlineColor: black,
+          "&:hover": {
+            backgroundColor: "#1E7556",
+            color: black,
+            borderColor: black,
+          },
         },
       },
     },
@@ -18,10 +31,15 @@ export const theme: Theme = createTheme({
       contrastText: black,
     },
     background: {
-      default: shopperGreen,
+      default: primaryColor,
+      paper: primaryColor,
     },
     text: {
-      primary: shopperGreen,
+      primary: black,
+    },
+    secondary: {
+      main: black,
+      contrastText: primaryColor,
     },
   },
 });

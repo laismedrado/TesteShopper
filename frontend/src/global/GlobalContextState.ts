@@ -7,6 +7,8 @@ export type ContextType = {
   addToCart: (product: ProductType) => void;
   removeFromCart: (product: ProductType) => void;
   clearCart: () => void;
+  getProducts: () => void ;
+
 };
 
 const GlobalStateContext = React.createContext<ContextType>({
@@ -15,6 +17,7 @@ const GlobalStateContext = React.createContext<ContextType>({
   addToCart: () => null,
   removeFromCart: () => null,
   clearCart: () => null,
+  getProducts: () => null, 
 });
 
 export default GlobalStateContext;

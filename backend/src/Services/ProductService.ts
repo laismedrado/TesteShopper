@@ -4,7 +4,11 @@ import { AppError } from "../error/AppErrors";
 
 export const getAllProducts = async (): Promise<Products[]> => {
   try {
-    return prisma.products.findMany();
+    return prisma.products.findMany({
+      orderBy: {
+        name: "asc",
+      },
+    });
   } catch (err: any) {
     throw new AppError(err);
   }
