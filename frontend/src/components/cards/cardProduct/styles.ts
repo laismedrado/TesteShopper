@@ -16,9 +16,13 @@ export const CardContainer = styled(Box)`
   &:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in;
+    @media (maxwidth: "768px") {
+      width: "20vw";
+      color: "red";
+      background-color: " red";
+    }
   }
 `;
-
 export const BoxNameProduct = styled.div`
   display: flex;
   text-align: start;
@@ -27,7 +31,6 @@ export const BoxNameProduct = styled.div`
   font-size: 1.2rem;
   align-items: center;
 `;
-
 export const BoxPriceProduct = styled.div`
   text-align: end;
   display: flex;
@@ -35,15 +38,11 @@ export const BoxPriceProduct = styled.div`
   font-size: 1.4rem;
   font-weight: 1000;
   align-self: center;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 `;
-
-
-export const StockProductField = styled.text `
+export const StockProductField = styled.text`
   font-weight: 500;
   text-align: end;
-  font-size: .8rem;
-   margin-top: 1rem; 
- 
-
-`
+  font-size: 0.8rem;
+  margin-top: 1rem;
+`;

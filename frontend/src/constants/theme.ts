@@ -3,6 +3,19 @@ import { shopperGreen, primaryColor, black } from "./color";
 
 export const theme: Theme = createTheme({
   components: {
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          cursor: "grab",
+          marginRight: ".6rem",
+          color: black,
+          borderColor: black,
+          "&:hover": {
+            color: black,
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -31,7 +44,6 @@ export const theme: Theme = createTheme({
       contrastText: black,
     },
     background: {
-      default: primaryColor,
       paper: primaryColor,
     },
     text: {
@@ -39,7 +51,7 @@ export const theme: Theme = createTheme({
     },
     secondary: {
       main: black,
-      contrastText: primaryColor,
+      contrastText: black,
     },
   },
 });

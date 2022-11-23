@@ -21,6 +21,7 @@ import {
   DialogContainer,
   BoxQuantityCart,
   CartContainer,
+  BoxIconShoppingCart,
 } from "./styles";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Decimal from "decimal.js";
@@ -35,9 +36,9 @@ import { OrderService } from "../../services/OrderService";
 import { alertError } from "../../alerts";
 import { toast } from "react-toastify";
 import { formatBRL } from "../../helper";
-import IconButton from "@mui/material/IconButton";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import IconButton from "@mui/material/IconButton";
 export const ShoppingCartProduct = () => {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState<DialogProps["scroll"]>("paper");
@@ -81,7 +82,7 @@ export const ShoppingCartProduct = () => {
       getProducts();
     });
   };
-  
+
   const handleQuantityChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     product: ProductType
@@ -97,7 +98,7 @@ export const ShoppingCartProduct = () => {
   return (
     <div>
       <BoxQuantityCart>
-        <IconButton>
+        <BoxIconShoppingCart onClick={handleClickOpen("paper")}>
           <StyledBadge
             badgeContent={productsCart.reduce(
               (acumulador, item) => acumulador + (item.quantityOrdered || 0),
@@ -106,15 +107,12 @@ export const ShoppingCartProduct = () => {
             color="secondary"
           >
             <ShoppingCartIcon
-              background-color="secondary"
+              background-color="primary"
+              sx={{ border: "2px red" }}
               fontSize="large"
-              color="secondary"
             />
           </StyledBadge>
-        </IconButton>
-        <Button variant="contained" onClick={handleClickOpen("paper")}>
-          IR PARA CARRINHO
-        </Button>
+        </BoxIconShoppingCart>
       </BoxQuantityCart>
 
       <DialogContainer open={open} onClose={handleClose} scroll={scroll}>
@@ -173,7 +171,6 @@ export const ShoppingCartProduct = () => {
           </InfoTextField>
           <ContainerForm>
             <ContainerFieldInput>
-              
               <TextInputField
                 inputRef={nameInput}
                 placeholder="NOME E SOBRENOME"

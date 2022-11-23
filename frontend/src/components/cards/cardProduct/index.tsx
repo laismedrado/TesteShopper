@@ -6,10 +6,10 @@ import {
   BoxPriceProduct,
   StockProductField,
 } from "./styles";
-import { ProductType } from "../../model/Product";
-import GlobalStateContext from "../../global/GlobalContextState";
-import { formatBRL } from "../../helper";
-import { theme } from "../../constants/theme";
+import { ProductType } from "../../../model/Product";
+import GlobalStateContext from "../../../global/GlobalContextState";
+import { formatBRL } from "../../../helper";
+import { theme } from "../../../constants/theme";
 
 export type CardProductProps = {
   product: ProductType;

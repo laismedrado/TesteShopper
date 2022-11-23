@@ -1,34 +1,32 @@
 import React, { useContext, useEffect, useState } from "react";
-import { CardProduct } from "../../components/cardProduct";
-import { ContainerFieldInput } from "../../components/shoppingCart/styles";
-import { SearchBar } from "../../components/SearchBar";
 import GlobalStateContext from "../../global/GlobalContextState";
-import { ProductType } from "../../model/Product";
-import { Container, ContainerProductList } from "./styles";
+import { Container, ContainerProductListPage, PaginationField } from "./styles";
+import { CardProduct } from "../../components/cards/cardProduct";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
 
 export const ProductstListPage = () => {
-  const { products } = useContext(GlobalStateContext);
-  const [productsToRender, setProductsToRender] = useState<ProductType[]>([]);
-
-  
+  const { products, productsToRender, setProductsToRender } =
+    useContext(GlobalStateContext);
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
   useEffect(() => {
     setProductsToRender(products);
   }, [products]);
+
   return (
-    <>
+    <ContainerProductListPage>
       <Container>
-        <ContainerFieldInput>
-          <SearchBar
-            setProductsToRender={setProductsToRender}
-            products={products}
-          />
-        </ContainerFieldInput>
-      </Container>
-      <ContainerProductList>
         {productsToRender.map((product) => (
           <CardProduct product={product} key={product.id} />
         ))}
-      </ContainerProductList>
-    </>
+      </Container>
+      <PaginationField>
+        {/* <Typography>Página: {page}</Typography> */}
+        <Pagination count={10} page={page} onChange={handleChange} />
+      </PaginationField>
+    </ContainerProductListPage>
   );
 };

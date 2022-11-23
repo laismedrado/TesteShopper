@@ -2,7 +2,9 @@ import {  Dialog, TextField } from "@mui/material";
 import styled from "styled-components";
 import { styled as style } from "@mui/material/styles";
 import Badge, { BadgeProps } from "@mui/material/Badge";
-import { shopperGreen } from "../../constants/color";
+import { black, primaryColor, shopperGreen} from "../../constants/color";
+import IconButton from "@mui/material/IconButton";
+
 
 export const CartContainer = styled.div`
   display: flex;
@@ -124,6 +126,7 @@ export const InfoTextField = styled.text`
 export const ContainerFieldInput = styled.text`
   color: black;
   font-weight: 5rem;
+
   justify-content: center;
 `;
 export const DialogContainer = styled(Dialog)`
@@ -133,12 +136,24 @@ export const DialogContainer = styled(Dialog)`
 `;
 export const StyledBadge = style(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
-    right: -1,
-    top: 16,
-    border: `2px solid ${theme.palette.background.paper}`,
+    right: 5,
+    top: -4,
+    border: `15px solid shopperGreen`,
     padding: "0 4px",
-    fontSize: "large",
-    background: shopperGreen,
+    fontSize: "small",
+    fontWeight: 800,
+    width: 20,
+    background:shopperGreen,
+    color: black
   },
 }));
  
+export const BoxIconShoppingCart = style(IconButton)`
+display: flex;
+
+margin-right: .5rem;
+background-color:#29a67a;
+
+
+
+` 

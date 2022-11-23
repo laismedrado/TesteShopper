@@ -1,8 +1,8 @@
 export type ProductType = {
-  id: number;
+  id?: number;
   name?: string;
   price?: number;
-  quantityStock: number;
+  quantityStock?: number;
   quantityOrdered?: number;
   qty_stock?: number;
 };
