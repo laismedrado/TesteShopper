@@ -9,4 +9,5 @@ export const Sucess = {
   OK: 200,
   Created: 201,
   Accepted: 202,
+  Updated: 200,
 };

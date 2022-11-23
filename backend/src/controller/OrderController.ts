@@ -23,4 +23,3 @@ export const createOrderEndpoint = async (req: Request, res: Response) => {
       .json(messages.recordNotCreated("Pedido"));
   }
 };
-

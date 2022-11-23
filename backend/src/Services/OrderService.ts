@@ -43,14 +43,12 @@ export const createOrder = async ({
       };
       return productStockUpdated;
     });
-
     const nameValidate = name.split(" ");
     if (nameValidate.length < 2) {
       throw new AppError(
         "Preencha o campo corretamente colocando nome e sobrenome."
       );
     }
-
     const order = await prisma.order.create({
       data: {
         delivery_date: new Date(deliveryDate),
@@ -58,7 +56,6 @@ export const createOrder = async ({
         total_price: totalPrice,
       },
     });
-
     const orderProductsEntities = orderProducts.map((product) => ({
       orderId: order.id,
       productId: product.productId,
@@ -74,7 +71,6 @@ export const createOrder = async ({
         data: { qty_stock: item.qty_stock },
       });
     });
-
     return {
       id: order.id,
       items,

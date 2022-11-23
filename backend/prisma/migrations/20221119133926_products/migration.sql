@@ -1,0 +1,4 @@
+-- Active: 1660692261328@@localhost@5432
+-- AlterTable
+ALTER TABLE "products" ADD COLUMN     "active" BOOLEAN NOT NULL DEFAULT true,
+ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
