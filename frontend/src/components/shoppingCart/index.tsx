@@ -58,15 +58,15 @@ export const ShoppingCartProduct = () => {
     if (!deliveryDate || !customerName)
       return alertError("Preencha todos os dados");
 
-    const nameValidate = customerName.split(" ");
-    if (nameValidate.length < 2) {
-      return alertError(
-        "Preencha o campo corretamente colocando nome e sobrenome."
-      );
-    }
+    // const nameValidate = customerName.split(" ");
+    // if (nameValidate.length < 2) {
+    //   return alertError(
+    //     "Preencha o campo corretamente colocando nome e sobrenome."
+    //   );
+    // }
     const body: OrderType = {
       items: productsCart,
-      name: customerName,
+      nicknameId : customerName,
       deliveryDate: deliveryDate?.toISOString(),
     };
 
@@ -98,7 +98,7 @@ export const ShoppingCartProduct = () => {
   return (
     <div>
       <BoxQuantityCart>
-        <BoxIconShoppingCart onClick={handleClickOpen("paper")}>
+        <IconButton  sx={{marginRight: "-6rem" }} onClick={handleClickOpen("paper")}>
           <StyledBadge
             badgeContent={productsCart.reduce(
               (acumulador, item) => acumulador + (item.quantityOrdered || 0),
@@ -108,11 +108,11 @@ export const ShoppingCartProduct = () => {
           >
             <ShoppingCartIcon
               background-color="primary"
-              sx={{ border: "2px red" }}
+              sx={{ border: "2px red"}}
               fontSize="large"
             />
           </StyledBadge>
-        </BoxIconShoppingCart>
+        </IconButton>
       </BoxQuantityCart>
 
       <DialogContainer open={open} onClose={handleClose} scroll={scroll}>

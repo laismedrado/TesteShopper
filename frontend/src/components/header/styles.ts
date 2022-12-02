@@ -13,4 +13,12 @@ export const BoxIcon = styled.div`
   display: flex;
   font-size: 1rem;
   font-weight: 800;
+  margin-right: 2rem;
 `;
+
+export const LoginText = styled.text `
+  display: flex;
+  margin-right: 2.5rem;
+  margin-top: .5rem;
+
+`

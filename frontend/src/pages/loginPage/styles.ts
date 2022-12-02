@@ -1,4 +1,7 @@
+import { NoEncryption } from "@mui/icons-material";
+import { AppBar } from "material-ui";
 import styled from "styled-components";
+import { Header } from "../../components/header";
 
 export const Container = styled.div`
   display: flex;
@@ -7,3 +10,4 @@ export const Container = styled.div`
   justify-content: center;
   background-color: #f0f0f0;
 `;
+

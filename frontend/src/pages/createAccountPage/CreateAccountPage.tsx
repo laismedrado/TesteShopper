@@ -3,7 +3,7 @@ import { CardRegistration } from "../../components/cards/cardRegistration";
 
 import { Container } from "./styles";
 
-export const CreateAccountPage: React.FC = () => {
+export const SignUpPage: React.FC = () => {
   return (
     <Container>
       <CardRegistration

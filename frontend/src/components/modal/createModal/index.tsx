@@ -64,7 +64,7 @@ export const CreateProduct: React.FC = () => {
       {
         name: "",
       },
-    ]);git add
+    ]);
   };
  
   const handleSubmit = (event: any) => {

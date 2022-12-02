@@ -5,3 +5,9 @@ export const goToManagement = (navigate: any) => {
 export const goToProductList = (navigate: any) => {
   navigate("/");
 };
+
+
+export const goToSignUp = (navigate: any) => {
+  navigate("/signup");
+};
+

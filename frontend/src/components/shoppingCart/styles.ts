@@ -145,15 +145,17 @@ export const StyledBadge = style(Badge)<BadgeProps>(({ theme }) => ({
     width: 20,
     background:shopperGreen,
     color: black
+    
   },
 }));
  
 export const BoxIconShoppingCart = style(IconButton)`
 display: flex;
-
-margin-right: .5rem;
+margin-right: 1rem;
+width:3rem;
+height:3rem;
 background-color:#29a67a;
 
 
-
 ` 
+

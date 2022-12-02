@@ -1,6 +1,8 @@
 import AppBar from "@mui/material/AppBar";
 import logo from "../../assets/shopperlogo.png";
-import { StyledToolbar, BoxIcon } from "./styles";
+import { StyledToolbar, BoxIcon, LoginText } from "./styles";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import PersonIcon from "@mui/icons-material/Person";
 import { ShoppingCartProduct } from "../shoppingCart/index";
 import LoginIcon from "@mui/icons-material/Login";
 import { IconButton } from "@mui/material";
@@ -10,6 +12,8 @@ import { useContext } from "react";
 import { SearchBar } from "../SearchBar";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { goToManagement, goToProductList } from "../../routes/Coordinator";
+import { BoxIconShoppingCart } from "../shoppingCart/styles";
+import { LoginModal } from "../modal/loginModal";
 
 export const Header: React.FC = () => {
   const { products, setProductsToRender } = useContext(GlobalStateContext);
@@ -19,34 +23,28 @@ export const Header: React.FC = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        {location.pathname === "/" && "/management" && (
-          <img alt={"Logo da shopper"} src={logo} height="50" width="180" />
-        )}
-        {location.pathname === "/management" && (
-          <img alt={"Logo da shopper"} src={logo} height="50" width="180" />
-        )}
-        {location.pathname === "/" && (
-          <SearchBar
-            setProductsToRender={setProductsToRender}
-            products={products}
-          />
-        )}
-        {location.pathname === "/management" && (
-          <SearchBar
-            setProductsToRender={setProductsToRender}
-            products={products}
-          />
-        )}
+        <img alt={"Logo da shopper"} src={logo} height="50" width="180" />
+
+        <SearchBar
+          setProductsToRender={setProductsToRender}
+          products={products}
+        />
+
         {location.pathname === "/" && (
           <BoxIcon>
+          
+              <LoginModal/>
+             
+          
+
+            <LoginText>
+              {" "}
+              Faça Login ou
+              <br />
+              Cadastre-se
+            </LoginText>
+
             <ShoppingCartProduct />
-            <h3> ADM</h3>
-            <IconButton>
-              <LoginIcon
-                onClick={() => goToManagement(navigate)}
-                fontSize="large"
-              />
-            </IconButton>
           </BoxIcon>
         )}
         {location.pathname === "/management" && (
