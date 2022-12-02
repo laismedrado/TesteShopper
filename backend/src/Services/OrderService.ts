@@ -3,11 +3,12 @@ import { prisma } from "../data/prismaClient";
 import { AppError } from "../error/AppErrors";
 import { OrderType } from "../model/Order";
 import { OrderProductType } from "../model/OrderProducts";
+import { userRoutes } from "../routes/User.Router";
 
 export const createOrder = async ({
   items,
   deliveryDate,
-  name,
+  nicknameId,
 }: OrderType): Promise<OrderType> => {
   try {
     let totalPrice = 0;
@@ -43,16 +44,17 @@ export const createOrder = async ({
       };
       return productStockUpdated;
     });
-    const nameValidate = name.split(" ");
-    if (nameValidate.length < 2) {
-      throw new AppError(
-        "Preencha o campo corretamente colocando nome e sobrenome."
-      );
-    }
+    // const nameValidate = name.split(" ");
+    // if (nameValidate.length < 2) {
+    //   throw new AppError(
+    //     "Preencha o campo corretamente colocando nome e sobrenome."
+    //   );
+    // }
     const order = await prisma.order.create({
       data: {
-        delivery_date: new Date(deliveryDate),
-        name: name,
+       
+        delivery_date: new Date(deliveryDate)!,
+        nicknameId,
         total_price: totalPrice,
       },
     });
@@ -75,8 +77,9 @@ export const createOrder = async ({
       id: order.id,
       items,
       deliveryDate: order.delivery_date,
-      name: order.name,
+      nicknameId: order.nicknameId,
       totalPrice: order.total_price,
+      
     };
   } catch (error: any) {
     console.log(error);

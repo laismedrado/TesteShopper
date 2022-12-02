@@ -3,8 +3,8 @@ export const Error = {
   NotFound: 404,
   MethodNotAllowed: 405,
   InternalServerError: 500,
+  Unauthorized: 401,
 };
-
 export const Sucess = {
   OK: 200,
   Created: 201,

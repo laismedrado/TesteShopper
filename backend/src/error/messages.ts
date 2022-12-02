@@ -1,6 +1,8 @@
 export const messages = {
   notExist: (name: string) => `${name} não existe`,
+  Unauthorized: (name: string) => `${name} não autorizado`,
   notDelete: (name: string) => `${name} não deletado`,
+  notEmpty: (name:string) => `${name}  não pode estar vazio`,
   outOfStock: (name: string) => `${name} sem estoque`,
   alreadyExist: (name: string) => `${name} já existe`,
   recordUniqueField: (name: string, register: string) =>

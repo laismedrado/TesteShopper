@@ -13,8 +13,8 @@ export const createOrderEndpoint = async (req: Request, res: Response) => {
         .status(httpCodeError.BadRequest)
         .json({ errors: errors.array() });
     }
-    const { name, deliveryDate, items, totalPrice } = req.body;
-    const order = await createOrder({ name, deliveryDate, items, totalPrice });
+    const { nicknameId , deliveryDate, items, totalPrice } = req.body;
+    const order = await createOrder({ nicknameId , deliveryDate, items, totalPrice });
     res.status(httpCode.Created).json(order);
   } catch (error: any) {
     console.log(error);

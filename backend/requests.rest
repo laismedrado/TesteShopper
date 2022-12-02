@@ -1,0 +1,12 @@
+
+###
+PUT http://localhost:3003/user/c677979d-d747-484c-ac60-e1a313e0a747
+content-type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MWQ0NDJiLTgyNmEtNGYxOS05NDllLWI2YzZmNjViYmI3NyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2OTQ0OTQ5NSwiZXhwIjoxNjY5NDg1NDk1fQ.eEADrs8lUP8kRi_yFDPyAfBSgwOVV7p4FRa1NTc9vf0
+
+{
+ "name":"beyonce hit",
+ "nickname":"bey",
+ "role":"ADMIN"
+}
+

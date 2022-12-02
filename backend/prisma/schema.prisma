@@ -12,7 +12,8 @@ datasource db {
 
 model Order {
   id            Int           @id @default(autoincrement())
-  name           String
+  nickname   Users @relation (fields: [ nicknameId], references: [id])
+  nicknameId String
   delivery_date  DateTime
   order_products  Order_Products[]
   total_price    Float
@@ -43,4 +44,24 @@ model Products {
   active  Boolean @default(true)
   @@map("products")
 
+}
+
+
+model Users  {
+id      String @id @default(uuid())
+email String    @unique
+password String  @unique
+name    String
+nickname    String @unique
+order Order[] 
+role    Role     @default(NORMAL)
+
+@@map("users")
+
+
+}
+
+enum Role {
+  NORMAL
+  ADMIN
 }
