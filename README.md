@@ -42,7 +42,9 @@
   - criar tela gerenciamento de usuário para somente o administrador poder definir se ele é usuário do tipo normal ou usuário administrador
   
   </br>
-  ## 🛠 Ferramentas 
+  
+ ## 🛠 Ferramentas 
+ 
 </br>
 
 
