@@ -41,10 +41,10 @@
              - inputs de dados do usuário para finalização da compra
              - botões de cancelar, fechar e finalizar 
     - Alerts de feedback das ações do usuário 
-    - Modal de login do usuário com 
+    - Modal de login do usuário ;
     - Tela de gerenciamento de produto :
-             - adição de um array de produtos
-             - atualização do produto 
+             - modal de adição  de produtos com botão de adicionar mais uma linha  de cadastrar produto e poder adicionar mais de um produto de uma vez só;
+             - modal de atualização do produto 
              - delete do produto ;
 
   </br>
