@@ -31,13 +31,13 @@
         - inputs de dados do usuário para finalização da compra
         - botões de cancelar, fechar e finalizar 
     - Alerts de feedback das ações do usuário 
-- Tela de gerenciamento de produto : adição, atualização e delete;
+    - Tela de gerenciamento de produto : adição de um array de produtos , atualização do produto e delete do produto ;
 
   </br>
 
 ## ✍🏻 Implementações sendo feitas:
 
-  - Conectar o backend com  signup, login e update do usuário com o frontend pois ainda estou estilizando a interface do forntend, mas o backend já está pronto;
+  - Conectar o backend com  signup, login e update do usuário ao frontend pois ainda estou estilizando a interface do frontend, mas o backend já está pronto;
   
   
   </br>
