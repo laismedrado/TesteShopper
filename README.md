@@ -4,7 +4,7 @@
 </div>
 
   ___
- <h3 align = "center">  Formulário de cadastro de pedidos de supermercado. Desenvolvido em Typescript (Node.js / React.js), para avaliação técnica para vaga de Desenvolvedora Fullstack Jr. na Shopper.
+ <h3 align = "center">  Formulário de cadastro de pedidos de supermercado e Gerenciamento de produto. Desenvolvido em Typescript (Node.js / React.js), para avaliação técnica para vaga de Desenvolvedora Fullstack Jr. na Shopper.
  </h3>
 
 <br/>
