@@ -19,6 +19,7 @@
     A aplicação conta com as seguintes funcionalidades:
     - banco de dados relacional 
     - Persistência de dados no Postgres
+    - Gerenciamento da quantidade de  estoque 
     - Validações de dados no backend e frontend;
     - Tela de listagem de produtos do estoque  através da renderização 
       de cards compostos por:
@@ -30,9 +31,16 @@
         - inputs de dados do usuário para finalização da compra
         - botões de cancelar, fechar e finalizar 
     - Alerts de feedback das ações do usuário 
+- Tela de gerenciamento de produto : adição, atualização e delete;
 
   </br>
 
+## ✍🏻 Implementações sendo feitas:
+
+  - Conectar o backend com  signup, login e update do usuário com o frontend pois ainda estou estilizando a interface do forntend, mas o backend já está pronto;
+  
+  
+  </br>
   ## 🛠 Ferramentas 
 </br>
 
