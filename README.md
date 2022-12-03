@@ -39,7 +39,7 @@
 
   - Conectar o backend com  signup, login e update do usuário ao frontend pois ainda estou estilizando a interface do frontend, mas o backend já está pronto;
   - paginação 
-  - criar tela gerenciamento de usuário par a somente o administrador poder definir se ele é usuário do tipo normal ou usuário administrador
+  - criar tela gerenciamento de usuário para somente o administrador poder definir se ele é usuário do tipo normal ou usuário administrador
   
   </br>
   ## 🛠 Ferramentas 
@@ -58,6 +58,51 @@
 
 ___
 </br>
+
+## ✍🏻 Telas:
+
+<div align = "center"  > 01- Tela princípal </div> 
+</br>
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205452730-4d9a33cc-c618-4623-a351-84d8d7e118c2.png"  width="500" height="250"  /> 
+</div>
+</br>
+<div align = "center"  > 02- Carrinho </div> 
+</br>
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205452635-d8f8723f-e379-41f5-b5a6-938915734a8f.png"  width="500" height="250"  /> 
+</div>
+</br>
+<div align = "center"  > 03- Tela de Login </div> 
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205452787-3965c323-7644-4c36-adfa-89f0eb9b66aa.png"  width="500" height="250" /> 
+</div>
+</br>
+<div align = "center"  > 04- Tela de Erro </div> 
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205452948-580e8bc7-9dd1-4b14-b4a9-b20e93cf4c01.png"  width="500" height="250" /> 
+</div>
+
+</br>
+<div align = "center"  > 05- Tela de Gerenciamento de Produto </div> 
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205453032-76612f24-7ff7-4ab5-a9b4-c0299e9a03c7.png"  width="500" height="250" /> 
+</div>
+</br>
+<div align = "center"  > 06- Tela de Cadastrar de Produto </div> 
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205453175-88cb9d29-1fdb-46fe-ae3a-2bc8a08faa8b.png"  width="500" height="250" /> 
+</div>
+</br>
+<div align = "center"  > 07- Tela de Atualizar Produto </div> 
+<div align = "center">
+<img src="https://user-images.githubusercontent.com/31759644/205453253-08412918-c381-4ef1-bebc-35b5534f7121.png"  width="500" height="250" /> 
+</div>
+
+
+
+https://user-images.githubusercontent.com/31759644/205453253-08412918-c381-4ef1-bebc-35b5534f7121.png
+
 
 ## 🖥   Contribuindo ou testando localmente 
 **Pré-requisitos:** Ter instalado na máquina ,node.js, git e docker-compose.
