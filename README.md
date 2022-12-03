@@ -27,7 +27,6 @@
     - Validações de dados 
     
     FRONTEND
-    
     - Tela de listagem de produtos do estoque  através da renderização 
       de cards compostos por:
              - o nome , preço, quantidade de estoque  e um botão  de compra
