@@ -38,7 +38,8 @@
 ## ✍🏻 Implementações sendo feitas:
 
   - Conectar o backend com  signup, login e update do usuário ao frontend pois ainda estou estilizando a interface do frontend, mas o backend já está pronto;
-  
+  - paginação 
+  - criar tela gerenciamento de usuário par a somente o administrador poder definir se ele é usuário do tipo normal ou usuário administrador
   
   </br>
   ## 🛠 Ferramentas 
