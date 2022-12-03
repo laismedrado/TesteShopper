@@ -108,7 +108,6 @@ ___
 
 
 
-https://user-images.githubusercontent.com/31759644/205453253-08412918-c381-4ef1-bebc-35b5534f7121.png
 
 
 ## 🖥   Contribuindo ou testando localmente 
