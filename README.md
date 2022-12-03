@@ -34,6 +34,7 @@
              - sinalização  do carrinho da quantidade de itens escolhidos
              - barra de pesquisa
              - icone de login/cadastro
+    - Footer com ícones direcionáveis para as redes sociais da shopper
     - Carrinho de compras contendo:
              - lista dos  cards de produtos selecionados
              - operaões numéricas de total e subtotal da compra
