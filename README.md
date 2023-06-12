@@ -20,7 +20,7 @@
     - banco de dados relacional 
     - Persistência de dados no Postgres
     - Gerenciamento da quantidade de  estoque 
-    - Design desenvolvido pensado em usabilidade, funcionalidade e incorporando os tons da logo da Shopper
+    - Design desenvolvido pensando em usabilidade, funcionalidade e incorporando os tons da logo da Shopper
     - Validações de dados no backend e frontend;
     - Tela de listagem de produtos do estoque  através da renderização 
       de cards compostos por:
