@@ -20,6 +20,7 @@
     - banco de dados relacional 
     - Persistência de dados no Postgres
     - Gerenciamento da quantidade de  estoque 
+    - Design desenvolvido pensado em usabilidade, funcionalidade e incorporando os tons da logo da Shopper
     - Validações de dados no backend e frontend;
     - Tela de listagem de produtos do estoque  através da renderização 
       de cards compostos por:
@@ -27,6 +28,7 @@
     - Header interativo sinalizando ao cliente a quantidade de itens escolhidos 
     - Carrinho de compras contendo:
         - lista dos  cards de produtos selecionados
+        - 
         - operaões numéricas de total e subtotal da compra
         - inputs de dados do usuário para finalização da compra
         - botões de cancelar, fechar e finalizar 
